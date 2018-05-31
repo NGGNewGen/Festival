@@ -1360,7 +1360,7 @@ class Main extends PluginBase implements Listener{
                         $playername =  $player->getName();
                         
                         // check @p
-                        $command = str_replace("@p", $playername, $command);
+                        $command = str_replace("{player}", $playername, $command);
 					
 						if ( !$player->isOp() && $this->useOpPerms($player, $area)  ) { // perm flag v1.0.4-11
 							$player->setOp(true);
